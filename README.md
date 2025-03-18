@@ -1,6 +1,34 @@
-# Darkseid OSINT Tool
+# Darkseid - OSINT Automation Tool
+
+Darkseid is a powerful OSINT (Open-Source Intelligence) automation tool designed for cybersecurity professionals and ethical hackers. It extracts metadata, performs facial recognition, conducts OSINT searches, and generates PDF reports.
+
+## Features
+- **Metadata Extraction**: Extracts EXIF data from images.
+- **Face Recognition**: Identifies faces in images.
+- **OSINT Analysis**: Searches for related online data.
+- **PDF Reporting**: Generates detailed reports with findings.
+- **ASCII Banner**: Displays a cool ASCII banner using `toilet`.
+
 ## Installation
-1. Clone the repo: \git clone https://github.com/PrinceGeorge00/Darkseid.git" >> README.md
-echo 2. Navigate into the directory: cd Darkseid"
-3. Install dependencies: \pip install -r requirements.txt" >> README.md
-echo 4. Run the tool: python3 darkseid.py"
+```bash
+sudo apt update && sudo apt install -y toilet python3 python3-pip
+pip install -r requirements.txt
+```
+
+## Usage
+```bash
+python3 darkseid.py --image /path/to/image.jpg --meta --face --osint
+```
+
+## Example Output
+```
+Processing image: example.jpg
+Extracting metadata...
+Recognizing faces...
+Performing OSINT scraping...
+PDF report saved at: /home/kali/Darkseid/reports/example.pdf
+```
+
+## License
+This project is for educational and ethical purposes only. Use responsibly.
+
