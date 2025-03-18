@@ -5,6 +5,17 @@ import subprocess
 from fpdf import FPDF
 from datetime import datetime
 
+# Generate ASCII banner using 'toilet'
+def generate_banner():
+    try:
+        banner = subprocess.check_output("toilet -f big -F metal Darkseid", shell=True).decode()
+        print(banner)
+    except Exception as e:
+        print("Error generating banner:", e)
+
+# Display the banner
+generate_banner()
+
 # Google API Configuration (Replace with your own)
 GOOGLE_API_KEY = "AIzaSyCf_IUcwm_zojbSjiCsCfzB8X9hIHT2_mY"
 GOOGLE_CSE_ID = "15c95d696f1e74485"
